@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radient Dental Group | Especialistas en Ortodoncia, Implantes y Cirugía Oral – Samborondón</title>
+  <meta name="description" content="Clínica dental de especialistas en Samborondón. Invisalign, implantes dentales, ortodoncia y cirugía oral con tecnología de escaneo 3D. Agenda tu cita hoy.">
+  <meta name="keywords" content="dentista Samborondón, ortodoncia Guayaquil, Invisalign Ecuador, implantes dentales, cirugía oral, Radient Dental Group">
+  <meta property="og:title" content="Radient Dental Group | Tu sonrisa en manos de especialistas">
+  <meta property="og:description" content="Clínica dental premium en Samborondón. Invisalign, implantes, ortodoncia y más. Agenda tu cita hoy.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-deep: #1a3a5c;
+      --blue-cobalt: #1e4fa3;
+      --blue-bright: #2563eb;
+      --blue-electric: #3b82f6;
+      --blue-light: #dbeafe;
+      --blue-pale: #eff6ff;
+      --white: #ffffff;
+      --cream: #f8f9fc;
+      --text-dark: #0f1b2d;
+      --text-mid: #334155;
+      --text-soft: #64748b;
+      --border: #e2e8f0;
+      --gold: #c9a84c;
+      --gold-light: #f5e7c6;
+      --font-display: 'Raleway', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); overflow-x: hidden; }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--blue-pale); }
+    ::-webkit-scrollbar-thumb { background: var(--blue-cobalt); border-radius: 2px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 2rem;
+      height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(30,79,163,0.08);
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      height: 64px;
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 4px 24px rgba(26,58,92,0.08);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 38px; height: 38px;
+      background: var(--blue-cobalt);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-text { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--blue-deep); letter-spacing: -0.3px; line-height: 1.1; }
+    .nav-logo-text span { color: var(--blue-cobalt); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-display); font-weight: 500; font-size: 13.5px; color: var(--text-mid); text-decoration: none; letter-spacing: 0.2px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue-cobalt); }
+    .nav-cta {
+      background: var(--blue-cobalt); color: var(--white);
+      font-family: var(--font-display); font-weight: 700; font-size: 13px;
+      letter-spacing: 0.3px;
+      padding: 10px 22px; border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--blue-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,79,163,0.3); }
+    .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--blue-deep); border-radius: 2px; transition: all 0.3s; }
+
+    /* HERO */
+    .hero {
+      min-height: 100dvh;
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 40%, #1e4fa3 100%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 100px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-shapes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-circle-1 {
+      position: absolute; width: 600px; height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(59,130,246,0.15);
+      top: -100px; right: -100px;
+      animation: rotateSlow 30s linear infinite;
+    }
+    .hero-circle-2 {
+      position: absolute; width: 400px; height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(59,130,246,0.1);
+      bottom: -50px; left: 200px;
+      animation: rotateSlow 20s linear infinite reverse;
+    }
+    .hero-dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(59,130,246,0.15) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+    }
+    .hero-glow {
+      position: absolute; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.6; } 50% { transform: translate(-50%,-50%) scale(1.2); opacity: 1; } }
+
+    .hero-content { padding: 0 5vw 0 8vw; position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      padding: 6px 16px; border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #60a5fa; animation: blinkDot 2s ease-in-out infinite; }
+    @keyframes blinkDot { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero-badge span { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: #93c5fd; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero-title {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+      line-height: 1.0; letter-spacing: -1.5px;
+      color: var(--white); margin-bottom: 24px;
+    }
+    .hero-title .accent { color: #60a5fa; display: block; }
+    .hero-subtitle {
+      font-size: 17px; line-height: 1.7; color: rgba(219,234,254,0.85);
+      max-width: 480px; margin-bottom: 44px;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--white); color: var(--blue-deep);
+      font-family: var(--font-display); font-weight: 700; font-size: 14px;
+      padding: 15px 28px; border-radius: 10px; text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: var(--white);
+      font-family: var(--font-display); font-weight: 600; font-size: 14px;
+      padding: 14px 28px; border-radius: 10px; text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
+    .hero-stats {
+      display: flex; gap: 36px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -1px; }
+    .hero-stat-label { font-size: 12px; color: rgba(219,234,254,0.6); font-weight: 500; margin-top: 2px; letter-spacing: 0.3px; }
+
+    /* HERO VISUAL */
+    .hero-visual { position: relative; z-index: 2; padding: 0 6vw 0 2vw; display: flex; justify-content: center; align-items: center; }
+    .hero-card-main {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+      animation: floatCard 6s ease-in-out infinite;
+    }
+    @keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    .hero-card-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .hero-card-logo-icon {
+      width: 48px; height: 48px; background: var(--white);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    }
+    .hero-card-logo-text { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--white); line-height: 1.2; }
+    .hero-card-logo-sub { font-size: 11px; color: rgba(219,234,254,0.6); font-weight: 400; }
+    .hero-services-list { display: flex; flex-direction: column; gap: 12px; }
+    .hero-service-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .hero-service-item:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+    .hero-service-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero-service-icon.blue { background: rgba(59,130,246,0.2); }
+    .hero-service-icon.cobalt { background: rgba(30,79,163,0.3); }
+    .hero-service-icon.light { background: rgba(147,197,253,0.15); }
+    .hero-service-name { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--white); }
+    .hero-service-desc { font-size: 11px; color: rgba(219,234,254,0.5); margin-top: 1px; }
+    .hero-card-badge {
+      position: absolute; top: -16px; right: -16px;
+      background: var(--gold); color: var(--white);
+      font-family: var(--font-display); font-size: 11px; font-weight: 700;
+      padding: 6px 14px; border-radius: 100px;
+      box-shadow: 0 4px 16px rgba(201,168,76,0.4);
+      letter-spacing: 0.3px;
+    }
+
+    /* MARQUEE */
+    .marquee-section {
+      background: var(--blue-cobalt);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex; gap: 0; animation: marquee 20s linear infinite;
+      width: max-content;
+    }
+    .marquee-section:hover .marquee-track { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-item {
+      display: flex; align-items: center; gap: 12px; padding: 0 32px;
+      font-family: var(--font-display); font-size: 13px; font-weight: 600;
+      color: rgba(255,255,255,0.85); white-space: nowrap; letter-spacing: 0.3px;
+    }
+    .marquee-sep { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+
+    /* SECTION BASE */
+    section { padding: 100px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .section-label {
+      font-family: var(--font-display); font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--blue-cobalt); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::before { content: ''; display: block; width: 24px; height: 2px; background: var(--blue-cobalt); }
+    .section-title {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.1; letter-spacing: -0.8px;
+      color: var(--text-dark); margin-bottom: 20px;
+    }
+    .section-title .blue { color: var(--blue-cobalt); }
+    .section-body { font-size: 16.5px; line-height: 1.75; color: var(--text-soft); max-width: 560px; }
+
+    /* SOBRE NOSOTROS */
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-visual { position: relative; }
+    .about-visual-main {
+      background: linear-gradient(135deg, var(--blue-pale) 0%, var(--blue-light) 100%);
+      border-radius: 24px; padding: 48px;
+      position: relative; overflow: hidden;
+      border: 1px solid rgba(30,79,163,0.1);
+    }
+    .about-icon-big {
+      width: 80px; height: 80px;
+      background: var(--blue-cobalt); border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 32px rgba(30,79,163,0.3);
+    }
+    .about-quote { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--blue-deep); line-height: 1.4; margin-bottom: 16px; }
+    .about-quote-sub { font-size: 14px; color: var(--text-soft); line-height: 1.6; }
+    .about-accent-card {
+      position: absolute; bottom: -24px; right: -24px;
+      background: var(--blue-cobalt); border-radius: 16px; padding: 20px 24px;
+      color: var(--white);
+      box-shadow: 0 12px 32px rgba(30,79,163,0.4);
+    }
+    .about-accent-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; }
+    .about-accent-label { font-size: 12px; opacity: 0.7; font-weight: 500; margin-top: 2px; }
+    .about-differentials { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
+    .about-diff-item { display: flex; gap: 16px; align-items: flex-start; }
+    .about-diff-icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: var(--blue-pale); border: 1px solid var(--blue-light);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .about-diff-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+    .about-diff-text { font-size: 13.5px; color: var(--text-soft); line-height: 1.55; }
+
+    /* EQUIPO */
+    .team { background: var(--cream); }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+    .team-card {
+      background: var(--white);
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      position: relative;
+    }
+    .team-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(26,58,92,0.12); border-color: rgba(30,79,163,0.2); }
+    .team-card-header {
+      padding: 40px 32px 32px;
+      background: linear-gradient(135deg, var(--blue-pale) 0%, rgba(219,234,254,0.5) 100%);
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .team-avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--blue-cobalt) 0%, var(--blue-electric) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--white);
+      box-shadow: 0 8px 24px rgba(30,79,163,0.3);
+      position: relative;
+    }
+    .team-avatar-ring {
+      position: absolute; inset: -4px; border-radius: 50%;
+      border: 2px solid rgba(30,79,163,0.2);
+    }
+    .team-name { font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
+    .team-specialty {
+      display: inline-block;
+      background: var(--blue-cobalt); color: var(--white);
+      font-family: var(--font-display); font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 100px; letter-spacing: 0.5px;
+    }
+    .team-card-body { padding: 24px 32px 32px; }
+    .team-docente-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gold-light); color: #92650a;
+      font-family: var(--font-display); font-size: 11px; font-weight: 700;
+      padding: 5px 12px; border-radius: 8px; margin-bottom: 16px;
+      letter-spacing: 0.3px;
+    }
+    .team-procedures-title { font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
+    .team-procedures { display: flex; flex-direction: column; gap: 7px; }
+    .team-proc-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-mid); }
+    .team-proc-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue-electric); flex-shrink: 0; }
+
+    /* SERVICIOS */
+    .services { background: var(--white); }
+    .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 72px; }
+    .services-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 20px;
+      text-align: center;
+      transition: all 0.3s; cursor: pointer;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--blue-cobalt) 0%, var(--blue-bright) 100%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(30,79,163,0.2); border-color: transparent; }
+    .service-card:hover .service-card-icon { background: rgba(255,255,255,0.15); }
+    .service-card:hover .service-card-name { color: var(--white); }
+    .service-card:hover .service-card-desc { color: rgba(219,234,254,0.8); }
+    .service-card-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--blue-pale);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      position: relative; z-index: 1;
+      transition: background 0.3s;
+    }
+    .service-card-name { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; position: relative; z-index: 1; transition: color 0.3s; }
+    .service-card-desc { font-size: 11.5px; color: var(--text-soft); line-height: 1.5; position: relative; z-index: 1; transition: color 0.3s; }
+
+    /* TECNOLOGIA */
+    .tech { background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%); padding: 100px 0; }
+    .tech-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .tech .section-label { color: #93c5fd; }
+    .tech .section-label::before { background: #93c5fd; }
+    .tech .section-title { color: var(--white); }
+    .tech .section-body { color: rgba(219,234,254,0.75); }
+    .tech-features { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+    .tech-feature {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px; border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s; cursor: default;
+    }
+    .tech-feature:hover { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.3); }
+    .tech-feature-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(59,130,246,0.15);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .tech-feature-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .tech-feature-text { font-size: 13px; color: rgba(219,234,254,0.6); line-height: 1.55; }
+    .tech-visual { position: relative; }
+    .tech-card-main {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px; padding: 40px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .tech-card-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: #93c5fd; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
+    .tech-scan-anim { text-align: center; padding: 32px 0; margin-bottom: 28px; position: relative; }
+    .tech-scan-circle {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 2px solid rgba(59,130,246,0.4);
+      margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .tech-scan-circle::before {
+      content: ''; position: absolute;
+      width: 80px; height: 80px; border-radius: 50%;
+      border: 1.5px solid rgba(59,130,246,0.3);
+    }
+    .tech-scan-circle::after {
+      content: ''; position: absolute;
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1.5px solid rgba(59,130,246,0.5);
+    }
+    .tech-scan-line {
+      position: absolute; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent 0%, rgba(59,130,246,0.8) 50%, transparent 100%);
+      animation: scanLine 2s ease-in-out infinite;
+      top: 50%;
+    }
+    @keyframes scanLine {
+      0% { transform: translateY(-48px); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateY(48px); opacity: 0; }
+    }
+    .tech-center-dot { width: 12px; height: 12px; border-radius: 50%; background: #60a5fa; position: relative; z-index: 1; animation: pulseDot 2s ease-in-out infinite; }
+    @keyframes pulseDot { 0%,100% { box-shadow: 0 0 0 0 rgba(96,165,250,0.6); } 50% { box-shadow: 0 0 0 8px rgba(96,165,250,0); } }
+    .tech-scan-label { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: rgba(219,234,254,0.5); margin-top: 16px; letter-spacing: 0.5px; }
+    .tech-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .tech-stat {
+      padding: 16px; border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+    }
+    .tech-stat-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; }
+    .tech-stat-label { font-size: 11px; color: rgba(219,234,254,0.5); margin-top: 4px; }
+
+    /* CASOS CLÍNICOS */
+    .casos { background: var(--cream); }
+    .casos-header { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 56px; }
+    .casos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .caso-card {
+      background: var(--white); border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .caso-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(26,58,92,0.1); }
+    .caso-images {
+      display: grid; grid-template-columns: 1fr 1fr;
+      height: 200px; position: relative;
+    }
+    .caso-before, .caso-after {
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 11px; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase;
+      position: relative;
+    }
+    .caso-before {
+      background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+      color: var(--text-soft);
+    }
+    .caso-after {
+      background: linear-gradient(135deg, var(--blue-cobalt) 0%, var(--blue-electric) 100%);
+      color: rgba(255,255,255,0.9);
+    }
+    .caso-divider {
+      position: absolute; left: 50%; top: 0; bottom: 0;
+      width: 32px; transform: translateX(-50%);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2;
+    }
+    .caso-divider-arrow {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--white); box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .caso-image-placeholder {
+      font-size: 2rem; opacity: 0.3;
+    }
+    .caso-body { padding: 20px 24px 24px; }
+    .caso-procedure { font-family: var(--font-display); font-size: 11px; font-weight: 700; color: var(--blue-cobalt); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .caso-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .caso-desc { font-size: 13px; color: var(--text-soft); line-height: 1.55; }
+    .caso-cta-wrap { text-align: center; margin-top: 48px; }
+
+    /* TESTIMONIOS */
+    .testimonios { background: var(--white); }
+    .testimonios-header { text-align: center; margin-bottom: 56px; }
+    .testimonios-header .section-label { justify-content: center; }
+    .testimonios-header .section-label::before { display: none; }
+    .testimonios-header .section-body { margin: 0 auto; text-align: center; }
+    .testimonios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonio-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      transition: all 0.3s; position: relative;
+    }
+    .testimonio-card:hover { box-shadow: 0 16px 48px rgba(26,58,92,0.08); transform: translateY(-4px); }
+    .testimonio-stars { display: flex; gap: 4px; margin-bottom: 20px; }
+    .star { color: #fbbf24; font-size: 14px; }
+    .testimonio-text { font-size: 14.5px; line-height: 1.7; color: var(--text-mid); margin-bottom: 24px; font-style: italic; }
+    .testimonio-author { display: flex; align-items: center; gap: 12px; }
+    .testimonio-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-cobalt) 0%, var(--blue-electric) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--white);
+    }
+    .testimonio-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--text-dark); }
+    .testimonio-service { font-size: 12px; color: var(--text-soft); }
+    .testimonio-quote-icon { position: absolute; top: 24px; right: 24px; opacity: 0.08; font-size: 48px; color: var(--blue-cobalt); line-height: 1; font-family: serif; }
+
+    /* UBICACION */
+    .ubicacion { background: var(--cream); }
+    .ubicacion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .ubicacion-info { display: flex; flex-direction: column; gap: 24px; }
+    .info-block {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px; background: var(--white);
+      border-radius: 16px; border: 1px solid var(--border);
+    }
+    .info-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--blue-pale); border: 1px solid var(--blue-light);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .info-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+    .info-text { font-size: 14px; color: var(--text-soft); line-height: 1.6; }
+    .horario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+    .horario-item { font-size: 13px; }
+    .horario-day { font-family: var(--font-display); font-weight: 700; color: var(--text-dark); }
+    .horario-time { color: var(--text-soft); }
+    .map-container {
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(26,58,92,0.08);
+      height: 400px; position: relative;
+      background: var(--blue-pale);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 16px;
+    }
+    .map-pin { font-size: 3rem; }
+    .map-address { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--blue-deep); text-align: center; line-height: 1.4; }
+    .map-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue-cobalt); color: var(--white);
+      font-family: var(--font-display); font-size: 13px; font-weight: 700;
+      padding: 10px 20px; border-radius: 10px; text-decoration: none;
+      transition: all 0.2s; margin-top: 8px;
+    }
+    .map-link:hover { background: var(--blue-deep); transform: translateY(-1px); }
+
+    /* CTA FINAL */
+    .final-cta {
+      background: linear-gradient(135deg, var(--blue-cobalt) 0%, var(--blue-deep) 100%);
+      padding: 100px 0; position: relative; overflow: hidden;
+    }
+    .final-cta-bg { position: absolute; inset: 0; }
+    .final-cta-circle-1 { position: absolute; width: 500px; height: 500px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); top: -150px; right: -100px; }
+    .final-cta-circle-2 { position: absolute; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); bottom: -80px; left: -50px; }
+    .final-cta-inner { text-align: center; position: relative; z-index: 2; }
+    .final-cta-label { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #93c5fd; margin-bottom: 20px; }
+    .final-cta-title { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.2rem, 4vw, 3.5rem); color: var(--white); line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
+    .final-cta-sub { font-size: 17px; color: rgba(219,234,254,0.8); margin-bottom: 48px; }
+    .final-cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--white); color: var(--blue-cobalt);
+      font-family: var(--font-display); font-weight: 700; font-size: 15px;
+      padding: 17px 36px; border-radius: 12px; text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+    .btn-outline-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: var(--white);
+      font-family: var(--font-display); font-weight: 600; font-size: 15px;
+      padding: 16px 36px; border-radius: 12px; text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: all 0.25s;
+    }
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1); }
+    .final-cta-note { margin-top: 28px; font-size: 13px; color: rgba(219,234,254,0.5); }
+
+    /* FOOTER */
+    footer {
+      background: var(--text-dark);
+      padding: 60px 0 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand-name { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand-logo {
+      width: 32px; height: 32px; background: var(--blue-cobalt);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    .footer-brand-desc { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social-btn {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; transition: all 0.2s;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-social-btn:hover { background: var(--blue-cobalt); border-color: var(--blue-cobalt); }
+    .footer-col-title { font-family: var(--font-display); font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-made { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* MOBILE */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { padding: 0 2rem; text-align: center; }
+      .hero-subtitle { max-width: 100%; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { display: none; }
+      .about-grid, .tech-inner, .ubicacion-grid, .services-intro { grid-template-columns: 1fr; gap: 48px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonios-grid { grid-template-columns: repeat(2, 1fr); }
+      .casos-grid { grid-template-columns: repeat(2, 1fr); }
+      .casos-header { grid-template-columns: 1fr; gap: 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-accent-card { position: static; margin-top: 24px; width: fit-content; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-cta { display: none; }
+      .team-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonios-grid, .casos-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .final-cta-actions { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .hero-title { font-size: 2.4rem; }
+      .nav { padding: 0 1.2rem; }
+    }
+
+    /* MOBILE NAV MENU */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(10,22,40,0.97);
+      backdrop-filter: blur(20px);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+    .mobile-menu a {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 800;
+      color: var(--white); text-decoration: none; letter-spacing: -0.5px;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: #60a5fa; }
+    .mobile-menu-close {
+      position: absolute; top: 24px; right: 24px;
+      background: rgba(255,255,255,0.1); border: none;
+      width: 44px; height: 44px; border-radius: 12px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* SVG ICONS inline */
+    .icon-svg { width: 22px; height: 22px; fill: none; stroke: var(--blue-cobalt); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-svg.white { stroke: var(--white); }
+    .icon-svg.gold { stroke: #c9a84c; }
+    .icon-svg.sm { width: 18px; height: 18px; }
+  </style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Cerrar">
+    <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+  <a href="#equipo" onclick="closeMobileMenu()">Equipo</a>
+  <a href="#casos" onclick="closeMobileMenu()">Casos Clínicos</a>
+  <a href="#ubicacion" onclick="closeMobileMenu()">Ubicación</a>
+  <a href="https://wa.link/lk710v" target="_blank" style="color:#60a5fa;">Agenda tu cita</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C7 2 4 6 4 10c0 3 1.5 5.5 4 7l1 3h6l1-3c2.5-1.5 4-4 4-7 0-4-3-8-8-8z"/>
+        <path d="M9 15s1 1 3 1 3-1 3-1"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">RADIENT<br><span>DENTAL GROUP</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#tecnologia">Tecnología</a></li>
+    <li><a href="#casos">Casos Clínicos</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+  </ul>
+  <a href="https://wa.link/lk710v" target="_blank" class="nav-cta">Agenda tu cita</a>
+  <div class="nav-hamburger" onclick="openMobileMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-shapes">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-glow"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Samborondón · Ecuador</span>
+    </div>
+    <h1 class="hero-title">
+      Tu sonrisa merece
+      <span class="accent">especialistas.</span>
+    </h1>
+    <p class="hero-subtitle">Ortodoncia, implantes, Invisalign y cirugía oral en una clínica diseñada para entregar resultados de precisión. Docentes universitarios. Tecnología de diagnóstico digital.</p>
+    <div class="hero-actions">
+      <a href="https://wa.link/lk710v" target="_blank" class="btn-primary">
+        <svg class="icon-svg" style="stroke:#1a3a5c;" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Agenda tu cita hoy
+      </a>
+      <a href="#servicios" class="btn-secondary">
+        <svg class="icon-svg white sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        Ver servicios
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">10+</div>
+        <div class="hero-stat-label">Especialidades</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3D</div>
+        <div class="hero-stat-label">Escaneo digital</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">UEES</div>
+        <div class="hero-stat-label">Docentes activos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div style="position:relative;">
+      <div class="hero-card-badge">Invisalign Certified</div>
+      <div class="hero-card-main">
+        <div class="hero-card-logo">
+          <div class="hero-card-logo-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1e4fa3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C7 2 4 6 4 10c0 3 1.5 5.5 4 7l1 3h6l1-3c2.5-1.5 4-4 4-7 0-4-3-8-8-8z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="hero-card-logo-text">Radient Dental</div>
+            <div class="hero-card-logo-sub">Samborondón Business Center · Of. 214B</div>
+          </div>
+        </div>
+        <div class="hero-services-list">
+          <div class="hero-service-item">
+            <div class="hero-service-icon blue">
+              <svg width="18" height="18" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg>
+            </div>
+            <div>
+              <div class="hero-service-name">Ortodoncia & Invisalign</div>
+              <div class="hero-service-desc">Alineadores con tecnología ClinCheck</div>
+            </div>
+          </div>
+          <div class="hero-service-item">
+            <div class="hero-service-icon cobalt">
+              <svg width="18" height="18" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 6 8 4 8 4s-2 4 0 8M12 12c0-6 4-8 4-8s2 4 0 8"/></svg>
+            </div>
+            <div>
+              <div class="hero-service-name">Implantología Dental</div>
+              <div class="hero-service-desc">Regeneración ósea y rehabilitación</div>
+            </div>
+          </div>
+          <div class="hero-service-item">
+            <div class="hero-service-icon light">
+              <svg width="18" height="18" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div>
+              <div class="hero-service-name">Cirugía Oral</div>
+              <div class="hero-service-desc">Extracciones, biopsias, patología oral</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item">Ortodoncia<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Invisalign<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Implantes Dentales<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Cirugía Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Escaneo 3D<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Ortopedia Dental<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Endodoncia<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Rehabilitación Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Patología Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Ortodoncia Lingual<div class="marquee-sep"></div></div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item">Ortodoncia<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Invisalign<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Implantes Dentales<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Cirugía Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Escaneo 3D<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Ortopedia Dental<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Endodoncia<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Rehabilitación Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Patología Oral<div class="marquee-sep"></div></div>
+    <div class="marquee-item">Ortodoncia Lingual<div class="marquee-sep"></div></div>
+  </div>
+</div>
+
+<!-- SOBRE NOSOTROS -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-visual-main">
+          <div class="about-icon-big">
+            <svg width="40" height="40" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 2C7 2 4 6 4 10c0 3 1.5 5.5 4 7l1 3h6l1-3c2.5-1.5 4-4 4-7 0-4-3-8-8-8z"/>
+              <path d="M9 15s1 1 3 1 3-1 3-1"/>
+            </svg>
+          </div>
+          <div class="about-quote">"Ayudamos a transformar sonrisas todos los días."</div>
+          <div class="about-quote-sub">Una clínica que combina formación universitaria de alto nivel con tecnología de diagnóstico digital para resultados predecibles y duraderos.</div>
+        </div>
+        <div class="about-accent-card">
+          <div class="about-accent-num">3</div>
+          <div class="about-accent-label">Especialistas certificados<br>Docentes UEES</div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <div class="section-label">Sobre Radient Dental</div>
+        <h2 class="section-title">Especialistas que enseñan <span class="blue">y tratan.</span></h2>
+        <p class="section-body">Nuestro equipo no solo practica odontología especializada — la enseña. Los tres especialistas que forman Radient Dental son docentes activos de la Universidad de Especialidades Espíritu Santo, lo que garantiza que cada tratamiento está respaldado por los estándares más rigurosos.</p>
+        <div class="about-differentials">
+          <div class="about-diff-item">
+            <div class="about-diff-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <div class="about-diff-title">Diagnóstico Digital Completo</div>
+              <div class="about-diff-text">Escaneo 3D, radiografías panorámicas y software ClinCheck de Invisalign para planificación exacta.</div>
+            </div>
+          </div>
+          <div class="about-diff-item">
+            <div class="about-diff-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="about-diff-title">Atención Personalizada</div>
+              <div class="about-diff-text">Cada paciente tiene un plan de tratamiento diseñado específicamente por el especialista de su área, no por generalistas.</div>
+            </div>
+          </div>
+          <div class="about-diff-item">
+            <div class="about-diff-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div>
+              <div class="about-diff-title">Instalaciones de Alto Estándar</div>
+              <div class="about-diff-text">Clínica de diseño moderno en el Samborondón Business Center, equipada con tecnología de última generación.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="team" id="equipo">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom: 12px;">
+      <div class="section-label" style="justify-content:center;"><div style="width:24px;height:2px;background:var(--blue-cobalt);"></div>Nuestro Equipo<div style="width:24px;height:2px;background:var(--blue-cobalt);"></div></div>
+    </div>
+    <h2 class="section-title reveal" style="text-align:center;">Especialistas que respaldan <span class="blue">cada resultado.</span></h2>
+    <p class="section-body reveal" style="text-align:center; margin: 0 auto 0; max-width:560px;">Cada doctor está dedicado exclusivamente a su área de especialidad, garantizando un nivel de profundidad que una clínica generalista no puede ofrecer.</p>
+    <div class="team-grid">
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-card-header">
+          <div class="team-avatar">
+            GR
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-name">Dra. Gabriela Rouillon</div>
+          <div class="team-specialty">Cirugía Oral & Patología</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-docente-badge">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Docente UEES
+          </div>
+          <div class="team-procedures-title">Procedimientos</div>
+          <div class="team-procedures">
+            <div class="team-proc-item">Extracción de muelas del juicio</div>
+            <div class="team-proc-item">Implantes dentales</div>
+            <div class="team-proc-item">Regeneración ósea</div>
+            <div class="team-proc-item">Biopsias y diagnóstico</div>
+            <div class="team-proc-item">Valoración de patologías</div>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-card-header">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #1e4fa3 0%, #3b82f6 100%);">
+            JL
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-name">Dr. Javier Lazaro</div>
+          <div class="team-specialty">Ortodoncia & Invisalign</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-docente-badge">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Docente UEES
+          </div>
+          <div class="team-procedures-title">Procedimientos</div>
+          <div class="team-procedures">
+            <div class="team-proc-item">Invisalign (alineadores)</div>
+            <div class="team-proc-item">Brackets metálicos y cerámicos</div>
+            <div class="team-proc-item">Escaneo 3D diagnóstico</div>
+            <div class="team-proc-item">Refinamientos ClinCheck</div>
+            <div class="team-proc-item">Ortodoncia lingual</div>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-card-header">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #1a3a5c 0%, #2563eb 100%);">
+            MR
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-name">Dra. María Isabel Rumbea</div>
+          <div class="team-specialty">Ortopedia Dental</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-procedures-title">Procedimientos</div>
+          <div class="team-procedures">
+            <div class="team-proc-item">Control de crecimiento y erupción</div>
+            <div class="team-proc-item">Expansión maxilar</div>
+            <div class="team-proc-item">Mantenedores de espacio</div>
+            <div class="team-proc-item">Ortodoncia 4x2</div>
+            <div class="team-proc-item">Apartología de ortopedia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="services-intro">
+      <div class="reveal">
+        <div class="section-label">Especialidades</div>
+        <h2 class="section-title">Todo lo que tu sonrisa <span class="blue">necesita.</span></h2>
+        <p class="section-body">Diez especialidades bajo un mismo techo, atendidas por el especialista correcto para cada tratamiento.</p>
+        <a href="https://wa.link/lk710v" target="_blank" class="btn-primary" style="margin-top:32px; display:inline-flex; color:#1a3a5c;">
+          <svg class="icon-svg" style="stroke:#1a3a5c;" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Consultar disponibilidad
+        </a>
+      </div>
+      <div class="reveal reveal-delay-2" style="padding: 32px; background: var(--blue-pale); border-radius: 20px; border: 1px solid var(--blue-light);">
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom: 20px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--blue-cobalt);"></div>
+          <span style="font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--blue-deep);letter-spacing:0.5px;">ATENCIÓN BAJO CITA PREVIA</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);">
+            <span style="font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--text-dark);">Lunes a Viernes</span>
+            <span style="font-size:13px;color:var(--blue-cobalt);font-weight:600;">08:30 – 18:00</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:10px 0;">
+            <span style="font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--text-dark);">Sábados</span>
+            <span style="font-size:13px;color:var(--blue-cobalt);font-weight:600;">09:00 – 13:00</span>
+          </div>
+        </div>
+        <a href="https://wa.link/lk710v" target="_blank" style="display:flex;align-items:center;gap:10px;margin-top:20px;padding:14px;background:white;border-radius:12px;border:1px solid var(--border);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--blue-cobalt)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg width="20" height="20" fill="none" stroke="#25d366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--text-dark);">Agendar por WhatsApp</span>
+          <span style="margin-left:auto;font-size:12px;color:var(--text-soft);">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="services-grid">
+      <!-- 10 servicios -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        </div>
+        <div class="service-card-name">Ortodoncia</div>
+        <div class="service-card-desc">Brackets metálicos y cerámicos</div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="service-card-name">Invisalign</div>
+        <div class="service-card-desc">Alineadores + escaneo 3D</div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 22V12M12 12C12 6 8 4 8 4s-2 4 0 8M12 12c0-6 4-8 4-8s2 4 0 8"/></svg>
+        </div>
+        <div class="service-card-name">Implantología</div>
+        <div class="service-card-desc">Implantes y regeneración ósea</div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div class="service-card-name">Ortopedia Dental</div>
+        <div class="service-card-desc">Control de crecimiento infantil</div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2C7 2 4 6 4 10c0 3 1.5 5.5 4 7l1 3h6l1-3c2.5-1.5 4-4 4-7 0-4-3-8-8-8z"/></svg>
+        </div>
+        <div class="service-card-name">Cirugía Oral</div>
+        <div class="service-card-desc">Extracciones y cirugías menores</div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+        </div>
+        <div class="service-card-name">Rehabilitación Oral</div>
+        <div class="service-card-desc">Prótesis, carillas y coronas</div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="service-card-name">Endodoncia</div>
+        <div class="service-card-desc">Tratamiento de conductos</div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/></svg>
+        </div>
+        <div class="service-card-name">Patología Oral</div>
+        <div class="service-card-desc">Biopsias y diagnóstico</div>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="service-card-name">Ortodoncia Lingual</div>
+        <div class="service-card-desc">Aparatos por dentro, invisibles</div>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" stroke="#1e4fa3" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="service-card-name">Sellantes</div>
+        <div class="service-card-desc">Prevención de caries</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGIA -->
+<section class="tech" id="tecnologia">
+  <div class="container">
+    <div class="tech-inner">
+      <div class="reveal">
+        <div class="section-label">Tecnología</div>
+        <h2 class="section-title">Diagnóstico preciso. <span style="color:#60a5fa;">Resultados predecibles.</span></h2>
+        <p class="section-body">Invertimos en tecnología de diagnóstico digital para que cada plan de tratamiento sea exacto antes de empezar.</p>
+        <div class="tech-features">
+          <div class="tech-feature">
+            <div class="tech-feature-icon">
+              <svg width="22" height="22" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <div class="tech-feature-title">Escaneo Intraoral 3D</div>
+              <div class="tech-feature-text">Modelo digital exacto de tu boca sin impresiones convencionales. Mayor comodidad y precisión.</div>
+            </div>
+          </div>
+          <div class="tech-feature">
+            <div class="tech-feature-icon">
+              <svg width="22" height="22" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <div>
+              <div class="tech-feature-title">Software ClinCheck Invisalign</div>
+              <div class="tech-feature-text">Simulación del movimiento dental paso a paso. Ves tu sonrisa final antes de iniciar el tratamiento.</div>
+            </div>
+          </div>
+          <div class="tech-feature">
+            <div class="tech-feature-icon">
+              <svg width="22" height="22" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div>
+              <div class="tech-feature-title">Radiografías Panorámicas</div>
+              <div class="tech-feature-text">Diagnóstico de imagen completo para detectar condiciones no visibles en el examen clínico.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-visual reveal reveal-delay-3">
+        <div class="tech-card-main">
+          <div class="tech-card-title">Escaneo 3D en proceso</div>
+          <div class="tech-scan-anim">
+            <div class="tech-scan-circle">
+              <div class="tech-scan-line"></div>
+              <div class="tech-center-dot"></div>
+            </div>
+            <div class="tech-scan-label">Capturando modelo digital</div>
+          </div>
+          <div class="tech-stats">
+            <div class="tech-stat">
+              <div class="tech-stat-num">0.1mm</div>
+              <div class="tech-stat-label">Precisión de escaneo</div>
+            </div>
+            <div class="tech-stat">
+              <div class="tech-stat-num">3D</div>
+              <div class="tech-stat-label">Modelo digital completo</div>
+            </div>
+            <div class="tech-stat">
+              <div class="tech-stat-num">360°</div>
+              <div class="tech-stat-label">Vista panorámica</div>
+            </div>
+            <div class="tech-stat">
+              <div class="tech-stat-num">ClinCheck</div>
+              <div class="tech-stat-label">Simulación de resultado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS CLÍNICOS -->
+<section class="casos" id="casos">
+  <div class="container">
+    <div class="casos-header">
+      <div class="reveal">
+        <div class="section-label">Casos Clínicos</div>
+        <h2 class="section-title">Resultados que <span class="blue">hablan.</span></h2>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="section-body">Casos reales tratados por nuestros especialistas. Cada transformación es el resultado de un diagnóstico preciso y un plan personalizado.</p>
+      </div>
+    </div>
+    <div class="casos-grid">
+      <div class="caso-card reveal reveal-delay-1">
+        <div class="caso-images">
+          <div class="caso-before">
+            <div>
+              <div class="caso-image-placeholder" style="font-size:3rem;opacity:0.2;">◡◡</div>
+              <div style="margin-top:8px;">Antes</div>
+            </div>
+          </div>
+          <div class="caso-after">
+            <div>
+              <div class="caso-image-placeholder" style="opacity:0.4;">◠◠</div>
+              <div style="margin-top:8px;">Después</div>
+            </div>
+          </div>
+          <div class="caso-divider">
+            <div class="caso-divider-arrow">
+              <svg width="14" height="14" fill="none" stroke="#1e4fa3" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-procedure">Invisalign · Dr. Lazaro</div>
+          <div class="caso-title">Corrección de apiñamiento moderado</div>
+          <div class="caso-desc">14 meses de tratamiento con alineadores. Cierre de espacios y alineación completa sin brackets.</div>
+        </div>
+      </div>
+      <div class="caso-card reveal reveal-delay-2">
+        <div class="caso-images">
+          <div class="caso-before">
+            <div>
+              <div class="caso-image-placeholder" style="font-size:3rem;opacity:0.2;">◡◡</div>
+              <div style="margin-top:8px;">Antes</div>
+            </div>
+          </div>
+          <div class="caso-after">
+            <div>
+              <div class="caso-image-placeholder" style="opacity:0.4;">◠◠</div>
+              <div style="margin-top:8px;">Después</div>
+            </div>
+          </div>
+          <div class="caso-divider">
+            <div class="caso-divider-arrow">
+              <svg width="14" height="14" fill="none" stroke="#1e4fa3" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-procedure">Implante Dental · Dra. Rouillon</div>
+          <div class="caso-title">Reemplazo de pieza perdida con implante</div>
+          <div class="caso-desc">Implante unitario con regeneración ósea previa. Resultado estético y funcional idéntico a diente natural.</div>
+        </div>
+      </div>
+      <div class="caso-card reveal reveal-delay-3">
+        <div class="caso-images">
+          <div class="caso-before">
+            <div>
+              <div class="caso-image-placeholder" style="font-size:3rem;opacity:0.2;">◡◡</div>
+              <div style="margin-top:8px;">Antes</div>
+            </div>
+          </div>
+          <div class="caso-after">
+            <div>
+              <div class="caso-image-placeholder" style="opacity:0.4;">◠◠</div>
+              <div style="margin-top:8px;">Después</div>
+            </div>
+          </div>
+          <div class="caso-divider">
+            <div class="caso-divider-arrow">
+              <svg width="14" height="14" fill="none" stroke="#1e4fa3" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="caso-body">
+          <div class="caso-procedure">Ortopedia · Dra. Rumbea</div>
+          <div class="caso-title">Expansión maxilar en paciente de 9 años</div>
+          <div class="caso-desc">Tratamiento interceptivo temprano. Corrección de mordida cruzada y mejora del patrón de crecimiento facial.</div>
+        </div>
+      </div>
+    </div>
+    <div class="caso-cta-wrap reveal">
+      <p style="font-size:15px;color:var(--text-soft);margin-bottom:20px;">¿Quieres ver si eres candidato a alguno de estos tratamientos?</p>
+      <a href="https://wa.link/lk710v" target="_blank" class="btn-primary" style="color:#1a3a5c;">
+        <svg class="icon-svg" style="stroke:#1a3a5c;" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Solicita tu valoración gratuita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios" id="testimonios">
+  <div class="container">
+    <div class="testimonios-header">
+      <div class="section-label reveal">Testimonios</div>
+      <h2 class="section-title reveal">Lo que dicen nuestros <span class="blue">pacientes.</span></h2>
+      <p class="section-body reveal">Pacientes reales que confiaron en nuestros especialistas y vieron transformada su sonrisa.</p>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testimonio-card reveal reveal-delay-1">
+        <div class="testimonio-quote-icon">"</div>
+        <div class="testimonio-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonio-text">"Llegué con mucho miedo a hacerme la extracción de la muela del juicio. La Dra. Rouillon fue increíblemente profesional y no sentí casi nada. El proceso de recuperación fue rápido y sin complicaciones."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">AM</div>
+          <div>
+            <div class="testimonio-name">Andrea M.</div>
+            <div class="testimonio-service">Cirugía Oral</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card reveal reveal-delay-2">
+        <div class="testimonio-quote-icon">"</div>
+        <div class="testimonio-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonio-text">"Empecé mi tratamiento de Invisalign hace 12 meses y los resultados superaron mis expectativas. El Dr. Lazaro me mostró exactamente cómo iban a quedar mis dientes desde el primer día con el software ClinCheck."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar" style="background: linear-gradient(135deg, #1e4fa3 0%, #3b82f6 100%);">CR</div>
+          <div>
+            <div class="testimonio-name">Carlos R.</div>
+            <div class="testimonio-service">Invisalign</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card reveal reveal-delay-3">
+        <div class="testimonio-quote-icon">"</div>
+        <div class="testimonio-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonio-text">"Mi hijo de 8 años necesitaba expansión maxilar y la Dra. Rumbea nos explicó todo el proceso de forma clara. Las instalaciones son modernas, el equipo es muy amable y el resultado del tratamiento ha sido excelente."</div>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar" style="background: linear-gradient(135deg, #1a3a5c 0%, #2563eb 100%);">PV</div>
+          <div>
+            <div class="testimonio-name">Patricia V.</div>
+            <div class="testimonio-service">Ortopedia Dental</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section class="ubicacion" id="ubicacion">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 56px;" class="reveal">
+      <div class="section-label" style="justify-content:center;"><div style="width:24px;height:2px;background:var(--blue-cobalt);"></div>Ubicación<div style="width:24px;height:2px;background:var(--blue-cobalt);"></div></div>
+      <h2 class="section-title">Encuéntranos en <span class="blue">Samborondón.</span></h2>
+    </div>
+    <div class="ubicacion-grid">
+      <div class="ubicacion-info">
+        <div class="info-block reveal reveal-delay-1">
+          <div class="info-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-title">Dirección</div>
+            <div class="info-text">Edificio Samborondón Business Center<br>Torre B, Oficina 214<br>Samborondón, Ecuador</div>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-delay-2">
+          <div class="info-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-title">Horarios de Atención</div>
+            <div class="info-text">
+              <div class="horario-grid">
+                <div class="horario-item"><div class="horario-day">Lunes – Viernes</div><div class="horario-time">08:30 – 18:00</div></div>
+                <div class="horario-item"><div class="horario-day">Sábados</div><div class="horario-time">09:00 – 13:00</div></div>
+              </div>
+              <div style="margin-top:10px;font-size:12px;color:var(--blue-cobalt);font-weight:600;">Atención bajo previa cita</div>
+            </div>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-delay-3">
+          <div class="info-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <div class="info-title">Agendar Cita</div>
+            <div class="info-text">Escríbenos por WhatsApp para consultas, confirmación de disponibilidad y agenda.</div>
+            <a href="https://wa.link/lk710v" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--blue-cobalt);text-decoration:none;">
+              <svg width="16" height="16" fill="none" stroke="#25d366" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              wa.link/lk710v →
+            </a>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-delay-4">
+          <div class="info-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div>
+            <div class="info-title">Instagram</div>
+            <div class="info-text">Síguenos para casos clínicos, educación dental y tips de salud oral.</div>
+            <a href="https://www.instagram.com/radient.ec/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--blue-cobalt);text-decoration:none;">@radient.ec →</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="map-container">
+          <svg width="48" height="48" fill="none" stroke="#1e4fa3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="map-address">Samborondón Business Center<br>Torre B · Oficina 214</div>
+          <a href="https://maps.google.com/?q=Samborondon+Business+Center+Guayaquil+Ecuador" target="_blank" class="map-link">
+            <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Abrir en Google Maps
+          </a>
+        </div>
+        <!-- Instagram embed placeholder -->
+        <div style="margin-top:24px;padding:24px;background:var(--white);border-radius:16px;border:1px solid var(--border);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <svg width="20" height="20" fill="none" stroke="#1e4fa3" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--text-dark);">@radient.ec</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+            <div style="aspect-ratio:1;background:var(--blue-light);border-radius:8px;"></div>
+            <div style="aspect-ratio:1;background:var(--blue-pale);border-radius:8px;"></div>
+            <div style="aspect-ratio:1;background:linear-gradient(135deg,var(--blue-cobalt),var(--blue-electric));border-radius:8px;opacity:0.4;"></div>
+          </div>
+          <a href="https://www.instagram.com/radient.ec/" target="_blank" style="display:block;text-align:center;margin-top:14px;font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--blue-cobalt);text-decoration:none;">Ver más en Instagram →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="final-cta">
+  <div class="final-cta-bg">
+    <div class="final-cta-circle-1"></div>
+    <div class="final-cta-circle-2"></div>
+  </div>
+  <div class="container">
+    <div class="final-cta-inner reveal">
+      <div class="final-cta-label">Primera consulta</div>
+      <h2 class="final-cta-title">Tu nueva sonrisa empieza<br>con una sola cita.</h2>
+      <p class="final-cta-sub">Sin listas de espera largas. Sin presiones. Solo un diagnóstico honesto de especialistas que también son docentes.</p>
+      <div class="final-cta-actions">
+        <a href="https://wa.link/lk710v" target="_blank" class="btn-white">
+          <svg width="18" height="18" fill="none" stroke="#25d366" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Reserva tu cita por WhatsApp
+        </a>
+        <a href="https://www.instagram.com/radient.ec/" target="_blank" class="btn-outline-white">
+          <svg width="18" height="18" fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+          Síguenos en Instagram
+        </a>
+      </div>
+      <div class="final-cta-note">Lunes a Viernes 08:30–18:00 · Sábados 09:00–13:00 · Samborondón Business Center, Of. 214B</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <div class="footer-brand-logo">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M12 2C7 2 4 6 4 10c0 3 1.5 5.5 4 7l1 3h6l1-3c2.5-1.5 4-4 4-7 0-4-3-8-8-8z"/></svg>
+          </div>
+          Radient Dental Group
+        </div>
+        <p class="footer-brand-desc">Especialistas en ortodoncia, implantología y cirugía oral. Docentes universitarios comprometidos con la excelencia clínica en Samborondón, Ecuador.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/radient.ec/" target="_blank" class="footer-social-btn" aria-label="Instagram">
+            <svg width="16" height="16" fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.link/lk710v" target="_blank" class="footer-social-btn" aria-label="WhatsApp">
+            <svg width="16" height="16" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <div class="footer-links">
+          <a href="#servicios">Ortodoncia & Invisalign</a>
+          <a href="#servicios">Implantes Dentales</a>
+          <a href="#servicios">Cirugía Oral</a>
+          <a href="#servicios">Ortopedia Dental</a>
+          <a href="#servicios">Endodoncia</a>
+          <a href="#servicios">Rehabilitación Oral</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Clínica</div>
+        <div class="footer-links">
+          <a href="#equipo">Nuestro Equipo</a>
+          <a href="#tecnologia">Tecnología</a>
+          <a href="#casos">Casos Clínicos</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="https://wa.link/lk710v" target="_blank">Agendar Cita</a>
+          <a href="https://www.instagram.com/radient.ec/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Radient Dental Group · Samborondón, Ecuador</div>
+      <div class="footer-made">Diseñado por Orion AI Studio</div>
+    </div>
+  </div>
+</footer>
+
+<!-- META PIXEL PLACEHOLDER -->
+<!-- Meta Pixel Code -->
+<script>
+// !function(f,b,e,v,n,t,s){...} // INSERT META PIXEL ID HERE
+</script>
+<!-- End Meta Pixel Code -->
+
+<script>
+  // NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // MOBILE MENU
+  function openMobileMenu() {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // SMOOTH ANCHOR SCROLL
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // SCHEMA ORG
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Radient Dental Group",
+    "description": "Clínica dental especializada en ortodoncia, implantes, Invisalign y cirugía oral en Samborondón, Ecuador.",
+    "url": "https://radient.ec",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Samborondón Business Center, Torre B, Oficina 214",
+      "addressLocality": "Samborondón",
+      "addressCountry": "EC"
+    },
+    "openingHours": ["Mo-Fr 08:30-18:00", "Sa 09:00-13:00"],
+    "sameAs": ["https://www.instagram.com/radient.ec/"]
+  };
+  const schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.text = JSON.stringify(schema);
+  document.head.appendChild(schemaScript);
+</script>
+</body>
+</html>
